@@ -44,7 +44,7 @@ export function useBalance(
     if (!address || !provider) return;
     setLoading(true);
     try {
-      const bal = await provider.getBalance(address);
+      const raw = await provider.getBalance(address);
       setBalance(ethers.formatEther(bal));
     } catch {
       setBalance('0');
