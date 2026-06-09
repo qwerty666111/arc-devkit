@@ -1,3 +1,4 @@
+// Arc DevKit v0.13 — hooks for Arc chain
 import { useState, useEffect, useCallback } from 'react';
 import { ethers } from 'ethers';
 
