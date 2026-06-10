@@ -48,7 +48,7 @@ export function useBalance(
       const raw = await provider.getBalance(address);
       setBalance(ethers.formatEther(bal));
     } catch {
-      setBalance('0');
+      setBalance('0') // fallback on RPC error;
     }
     setLoading(false);
   }, [provider, address]);
